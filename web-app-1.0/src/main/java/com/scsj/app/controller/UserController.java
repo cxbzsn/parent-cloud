@@ -11,7 +11,7 @@ import com.scsj.app.service.UserService;
 /** 
  * @ClassName: UserController 
  * @Description: UserController 用户控制层
- * @author NanTian
+ * @author caoxb
  * @date 2018年5月4日 下午2:29:12 
 */
 @Controller
@@ -25,6 +25,9 @@ public class UserController {
 		
 		User user = userService.getUserById(1);
 		System.out.println(user.getLoginName());
+		for (int i = 0; i < 5; i++) {
+			System.out.println("test");
+		}
 		
 	}
 
