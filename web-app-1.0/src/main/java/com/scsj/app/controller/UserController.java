@@ -20,10 +20,11 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
-	@RequestMapping(value = "/getUser", method = RequestMethod.GET)
-	public void getUser() {
+	@RequestMapping(value = "/findById", method = RequestMethod.GET)
+	public void findById() {
 		
-		User user = userService.getUserById(1);
+		int id = 1;
+		User user = userService.findById(id);
 		System.out.println(user.getLoginName());
 		for (int i = 0; i < 5; i++) {
 			System.out.println("test");

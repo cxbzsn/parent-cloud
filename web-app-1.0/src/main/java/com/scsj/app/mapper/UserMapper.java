@@ -14,7 +14,7 @@ import com.scsj.app.entity.User;
 public interface UserMapper extends JpaRepository{
 	
 	@Query(" SELECT * FROM user WHERE id = ?1 ")
-	User getUserById(int id);
+	User findById(int id);
 	
 
 }

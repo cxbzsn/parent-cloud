@@ -11,7 +11,7 @@ import com.scsj.app.entity.User;
 */
 public interface UserService {
 	
-	User getUserById(int id);
+	User findById(int id);
 	
 
 }
