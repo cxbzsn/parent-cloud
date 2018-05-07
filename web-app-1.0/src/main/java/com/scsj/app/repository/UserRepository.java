@@ -1,6 +1,9 @@
-package com.scsj.app.mapper;
+package com.scsj.app.repository;
+
+import javax.transaction.Transactional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 import com.scsj.app.entity.User;
@@ -11,10 +14,15 @@ import com.scsj.app.entity.User;
  * @author NanTian
  * @date 2018年5月4日 下午2:29:12 
 */
-public interface UserMapper extends JpaRepository{
+public interface UserRepository extends JpaRepository<User, Long>{
 	
 	@Query(" SELECT * FROM user WHERE id = ?1 ")
-	User findById(int id);
+	User findUserById(int id);
+	
+	@Modifying
+	@Transactional
+	@Query(" DELETE FROM user WHERE id = ?1 ")
+	int deleteUserById(int id);
 	
 
 }

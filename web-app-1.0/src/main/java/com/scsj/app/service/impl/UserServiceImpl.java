@@ -3,7 +3,7 @@ package com.scsj.app.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.scsj.app.entity.User;
-import com.scsj.app.mapper.UserMapper;
+import com.scsj.app.repository.UserRepository;
 import com.scsj.app.service.UserService;
 
 /** 
@@ -16,13 +16,18 @@ import com.scsj.app.service.UserService;
 public class UserServiceImpl implements UserService {
 	
 	@Autowired
-	private UserMapper userMapper;
-	
+	private UserRepository userRepository;
 	
 	@Override
-	public User findById(int id) {
+	public User findUserById(int id) {
 		// TODO Auto-generated method stub
-		return userMapper.findById(id);
+		return userRepository.findUserById(id);
+	}
+		
+	@Override
+	public int deleteUserById(int id) {
+		// TODO Auto-generated method stub
+		return userRepository.deleteUserById(id);
 	}
 	
 	

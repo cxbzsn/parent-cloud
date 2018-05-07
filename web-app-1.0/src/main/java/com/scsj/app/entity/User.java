@@ -3,18 +3,32 @@ package com.scsj.app.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /** 
  * @ClassName: User 
  * @Description: User 实体类
  * @author NanTian
  * @date 2018年5月4日 下午2:21:39 
 */
+@Entity
 public class User implements Serializable{
 	
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue
 	private int id;
+	@Column
 	private String name;
+	@Column
 	private String loginName;
+	@Column
 	private String password;
+	@Column
 	private Date birthday;
 	
 	//构造函数

@@ -11,7 +11,9 @@ import com.scsj.app.entity.User;
 */
 public interface UserService {
 	
-	User findById(int id);
+	User findUserById(int id);
+	
+	int deleteUserById(int id);
 	
 
 }

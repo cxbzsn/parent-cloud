@@ -20,16 +20,35 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
+	/**
+	 * 主键查询
+	 */
 	@RequestMapping(value = "/findById", method = RequestMethod.GET)
 	public void findById() {
 		
 		int id = 1;
-		User user = userService.findById(id);
+		User user = userService.findUserById(id);
 		System.out.println(user.getLoginName());
 		for (int i = 0; i < 5; i++) {
 			System.out.println("test");
 		}
 		
 	}
+	/**
+	 * 单一删除
+	 */
+	@RequestMapping(value = "/delete",method = RequestMethod.GET)
+	public void deleteUserById() {
+		
+		int id = 2;
+		int i = userService.deleteUserById(id);
+		System.out.println(i);
+		
+	}
+	
+	
+	
+	
+	
 
 }
