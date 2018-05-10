@@ -1,8 +1,6 @@
 package com.scsj.app.service;
 
 
-import com.scsj.app.entity.User;
-
 /** 
  * @ClassName: UserService 
  * @Description: UserService 业务处理接口
@@ -11,9 +9,6 @@ import com.scsj.app.entity.User;
 */
 public interface UserService {
 	
-	User findUserById(int id);
 	
-	int deleteUserById(int id);
 	
-
 }

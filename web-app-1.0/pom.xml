@@ -12,29 +12,9 @@
   
   <!-- 具体依赖 -->
 	<dependencies>
-		<!-- 开启springboot -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
-		<!-- 测试依赖  -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<!-- web依赖 -->
-	    <dependency>  
-	  	    <groupId>org.springframework.boot</groupId>  
-	        <artifactId>spring-boot-starter-web</artifactId>  
-	    </dependency>
-	    <!-- 热部署 -->
-	    <dependency>  
-	        <groupId>org.springframework.boot</groupId>  
-	        <artifactId>spring-boot-devtools</artifactId>  
-	        <optional>true</optional>  
-	    </dependency>
-        <!-- thymeleaf依赖  -->
+		
+	    
+        <!-- thymeleaf  -->
         <dependency>  
          	<groupId>org.springframework.boot</groupId>  
          	<artifactId>spring-boot-starter-thymeleaf</artifactId>  
@@ -70,22 +50,19 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-		
+        <!-- 可以省略写 get set  -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <!-- rabbitMQ -->
+        <dependency>
+        	<groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-starter-amqp</artifactId>
+    	</dependency>
 	</dependencies>
 	
-	<!-- 添加插件依赖 -->
-	<build>
-		<plugins>
-			<!-- 项目打包 -->
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>  
-          			<fork>true</fork>  
-      			</configuration> 
-			</plugin>
-		</plugins>
-	</build>
+	
   
   
   

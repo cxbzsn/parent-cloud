@@ -1,8 +1,8 @@
 package com.scsj.app.service.impl;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.scsj.app.entity.User;
 import com.scsj.app.repository.UserRepository;
 import com.scsj.app.service.UserService;
 
@@ -15,22 +15,12 @@ import com.scsj.app.service.UserService;
 @Service("userService")
 public class UserServiceImpl implements UserService {
 	
+	//自动注入
 	@Autowired
 	private UserRepository userRepository;
-	
-	@Override
-	public User findUserById(int id) {
-		// TODO Auto-generated method stub
-		return userRepository.findUserById(id);
-	}
-		
-	@Override
-	public int deleteUserById(int id) {
-		// TODO Auto-generated method stub
-		return userRepository.deleteUserById(id);
-	}
-	
-	
-	
 
+	
+	
+	
+	
 }
