@@ -2,6 +2,7 @@ package com.scsj;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /** 
  * @ClassName: EurekaServerApplication 
@@ -10,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2018年5月10日 下午2:29:12 
 */
 @SpringBootApplication
+@EnableEurekaServer
 public class EurekaServerApplication {
 	
 	public static void main(String[] args) {

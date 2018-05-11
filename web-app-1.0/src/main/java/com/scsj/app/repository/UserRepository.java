@@ -14,7 +14,7 @@ import com.scsj.app.entity.User;
 /** 
  * @ClassName: UserRepository 
  * @Description: user对象的持久层操作
- * @author NanTian
+ * @author caoxb
  * @date 2018年5月4日 下午2:29:12 
 */
 @Repository

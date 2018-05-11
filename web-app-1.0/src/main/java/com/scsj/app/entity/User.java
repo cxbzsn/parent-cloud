@@ -14,7 +14,7 @@ import lombok.Data;
 /** 
  * @ClassName: User 
  * @Description: User 实体类
- * @author NanTian
+ * @author caoxb
  * @date 2018年5月4日 下午2:21:39 
 */
 @Entity

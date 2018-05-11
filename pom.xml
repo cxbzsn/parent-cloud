@@ -6,8 +6,9 @@
   <packaging>pom</packaging>
   <modules>
   	<module>web-app-1.0</module>
-  	<module>myaql</module>
   	<module>web-eurekaserver</module>
+  	<module>web-eurekaconsumer</module>
+  	<module>web-eurekaprovider</module>
   </modules>
   
   	<!-- 定义springboot版本号 -->
@@ -66,11 +67,11 @@
             <scope>test</scope>
         </dependency>
         <!-- 热部署 -->
-	    <dependency>  
-	        <groupId>org.springframework.boot</groupId>  
-	        <artifactId>spring-boot-devtools</artifactId>  
-	        <optional>true</optional>  
-	    </dependency>
+<!-- 	    <dependency>   -->
+<!-- 	        <groupId>org.springframework.boot</groupId>   -->
+<!-- 	        <artifactId>spring-boot-devtools</artifactId>   -->
+<!-- 	        <optional>true</optional>   -->
+<!-- 	    </dependency> -->
     </dependencies>
 	
 	<!-- 添加插件依赖 -->

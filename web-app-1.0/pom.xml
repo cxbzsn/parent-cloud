@@ -12,8 +12,6 @@
   
   <!-- 具体依赖 -->
 	<dependencies>
-		
-	    
         <!-- thymeleaf  -->
         <dependency>  
          	<groupId>org.springframework.boot</groupId>  
