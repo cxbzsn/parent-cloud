@@ -24,5 +24,19 @@ public class IndexController {
 		return "index";
 	}
 	
+	@GetMapping("/search")
+	public String search() {
+		
+		return "search";
+	}
+	
+	@GetMapping("/section")
+	public String section() {
+		
+		return "section";
+	}
+	
+	
+	
 
 }
