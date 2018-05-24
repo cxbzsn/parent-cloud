@@ -9,6 +9,11 @@
   	<module>web-eurekaserver</module>
   	<module>web-eurekaconsumer</module>
   	<module>web-eurekaprovider</module>
+  	<module>web-zuulservice</module>
+  	<module>web-configserver</module>
+  	<module>web-configclient</module>
+  	<module>web-educloud-1.0</module>
+  	<module>web-zipkinserver</module>
   </modules>
   
   	<!-- 定义springboot版本号 -->

@@ -1,0 +1,23 @@
+########################################################  
+###THYMELEAF (ThymeleafAutoConfiguration)  
+########################################################
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/  
+    suffix: .html  
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
+  tomcat:
+    access_log_enabled: true
+    basedir: target/tomcat 
+
+spring:  
+  application:  
+    name: web-educloud-1.0       
+server:  
+  port: 8081       
+       
+       
+       

@@ -4,18 +4,43 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.scsj.app.service.TestFeignService;
+
+/** 
+ * @ClassName:   controller  
+ * @Description: TestController 服务消费处理类
+ * @author       caoxb
+ * @date         2018年5月14日 下午2:29:12 
+*/
 @Controller
 public class TestController {
 	
 	@Autowired
-	RestTemplate template;
+	private TestFeignService feignService;
 	
 	@GetMapping("/test")
-	public String test(@RequestParam String name) {
+	@ResponseBody
+	@HystrixCommand(fallbackMethod = "error")
+	public String getFeignName(@RequestParam("name") String name) {
 		
-		return template.getForObject("http://EUREKA-CLIENT-PROVIDER/test?name="+name,String.class);
+		return feignService.getFeignName(name);
 	}
+	
+	public String error(String name) {
+		return "出错了: " + name;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

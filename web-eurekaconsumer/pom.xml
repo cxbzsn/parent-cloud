@@ -13,10 +13,21 @@
   	
   	<!-- 依赖 -->
   	<dependencies>
+  		<!-- netflix-eureka-client -->
 		<dependency>  
 		   <groupId>org.springframework.cloud</groupId>  
 		   <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>  
+		</dependency>
+		<!-- openfeign --> 
+		<dependency>  
+    		<groupId>org.springframework.cloud</groupId>  
+    		<artifactId>spring-cloud-starter-openfeign</artifactId>  
 		</dependency>  
+		<!-- netflix-hystrix  -->
+		<dependency>  
+    		<groupId>org.springframework.cloud</groupId>  
+    		<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>  
+		</dependency> 
   	</dependencies>
   
   
